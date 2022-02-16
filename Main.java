@@ -5,17 +5,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        //generating a random number
         System.out.print("Guess the number: ");
-        double randomNumber=Math.random();
-        randomNumber = randomNumber * 100;
-        //randomNumber = randomNumber +1;
-        int randomInt =(int) randomNumber;
+        int num = RandomInteger();
         int x = scan.nextInt();
         int count=1;
-        while (x != randomInt) {
+        while (x != num) {
 
-            if (x < randomInt) {
+            if (x < num) {
                 System.out.println(x + " is small");
             } else {
                 System.out.println(x + " is big");
@@ -23,8 +19,14 @@ public class Main {
            x = scan.nextInt();
             count++;
         }
-        System.out.println("Bingo!, You guessed it.\nThe number is " + randomInt);
+        System.out.println("Bingo!, You guessed it.\nThe number is " + num);
         System.out.println("You guess the number in " + count + " tries.");
 
+    }
+    public static int  RandomInteger() {
+        double randomNumber=Math.random();
+        randomNumber = randomNumber * 100;
+        int randomInt =(int) randomNumber;
+        return randomInt;
     }
 }
