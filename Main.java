@@ -12,7 +12,7 @@ public class Main {
         //randomNumber = randomNumber +1;
         int randomInt =(int) randomNumber;
         int x = scan.nextInt();
-        int count=0;
+        int count=1;
         while (x != randomInt) {
 
             if (x < randomInt) {
